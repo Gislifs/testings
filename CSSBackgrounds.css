@@ -1,0 +1,11 @@
+body {
+  background-image: url('https://th.bing.com/th/id/R.06f8df5bde9507404c53fba3474b70c3?rik=NcEaMLODKhP9YQ&riu=http%3a%2f%2fblog.entheosweb.com%2fwp-content%2fuploads%2f2012%2f01%2fheaderblue.jpg&ehk=PLTzRQY%2fvzv4ykRsSGkxzVoW%2bafsgkeQmScc15arvVc%3d&risl=&pid=ImgRaw&r=0');
+  background-repeat: no-repeat;
+  background-size: 1500px 183px;
+  
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.35)   /* 35% opaque white */;
+  padding: 0.25em;
+}

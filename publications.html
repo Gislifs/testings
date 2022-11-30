@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>FeenstraLab: Publications</title>
+
+
+
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="FeenstraLab: Publications"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="FeenstraLab"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="FeenstraLab: Publications"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Publications"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">/* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+  @import url('https://fonts.googleapis.com/css2?family=Cardo');
+  @import url('https://fonts.googleapis.com/css2?family=Alata');
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.075rem;                   /* edited */
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --heading-color:   rgba(0, 0, 0, 0.8); /*black*/
+    --body-color:      rgba(0, 0, 0, 0.8); /*black*/
+    --aside-color:     rgba(0, 0, 0, 0.6); /*black/gray*/
+    --fig-cap-color:   rgba(0, 0, 0, 0.6); /*black/gray*/
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    'Alata', sans-serif;        /* edited */
+    --mono-font:       monospace;
+    --body-font:       'Cardo', serif;             /* edited */
+    --navbar-font:     'Alata', sans-serif;        /* edited */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5); /*gray*/
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8); /*black*/
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       1.075rem;                   /* edited */
+    --text-color:      rgb(0, 0, 0);               /* edited */
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       #000;                     /* edited */
+    --text-size:        15px;
+    --hover-color:      #00bfff; /*text color*/   /* edited */
+    --bkgd-color:       #fff;                     /* edited */
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #00bfff; /* original 0F2E3D */
+  }
+
+  body {
+    background-image: url('https://th.bing.com/th/id/R.700c9c8884650d4e7ab035d1af06bd2b?rik=Ow8m%2bu2%2bBXUSdg&riu=http%3a%2f%2fwww.colordic.org%2fimage%2f00bfff.png&ehk=9om0MVeGU3U2TxJbN7aCXp9GrWq%2f0VrzLwRvPnk4nyA%3d&risl=&pid=ImgRaw&r=0');
+    background-repeat: no-repeat;
+    background-size: 1500px 183px;
+    
+  }
+
+
+  /*-- Additional custom styles --*/
+
+  .categories li > a:hover {
+      color: #00ff00;
+      border-bottom: 1px #00ff00;
+  }
+
+  p a:hover  {
+      color: #00ff00;
+  }
+
+  /* Change appearance of headers */
+  h1, h2, h3, h4, h5 {
+      font-weight: 700;
+  }
+
+  /* Use specific font in the body of the text */
+  html, body, p {
+      font-weight: 200;
+      /*line-height: 1.3rem; */
+      /*font-style: normal;*/
+  }
+
+  ul > li::marker {
+      font-weight: 700;
+      font-size: 1.125em;
+  }</style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Publications","authors":[]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">FeenstraLab</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="Research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="News.html">News</a>
+<a href="team.html">Team</a>
+<a href="contact.html">Contact Us</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Publications</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+
+<div class="d-article">
+<h2 id="journal-articles">Journal articles</h2>
+<h3 id="section">2022</h3>
+<p>Fadista J, Skotte L, Karjalainen J, Abner E, Sørensen E, Ullum H, Werge T, iPSYCH Group, Esko T, Milani L, Palotie A, Daly M, FinnGen Consortium, Melbye M, Feenstra B, Geller F. <strong>Comprehensive genome-wide association study of different forms of hernia identifies more than 80 associated loci</strong>. Nature Communications 2022; 13:2300. <a href="https://pubmed.ncbi.nlm.nih.gov/35680855/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41467-022-30921-4"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Vogelezang S, Bradfield JP, the Early Growth Genetics Consortium, Grant SFA, Felix JF, Jaddoe VWV. <strong>Genetics of early-life head circumference and genetic correlations with neurological, psychiatric and cognitive outcomes.</strong> BMC Medical Genomics 2022; 15:124. <a href="https://pubmed.ncbi.nlm.nih.gov/35659227/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1186/s12920-022-01281-1"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Jørsboe E, Andersen MK, Skotte L, Færgeman NJ, Hanghøj K, Santander CG, Senftleber NK, Diaz LJ, Tvermosegaard M, Waples RK, Geller F, Bjerregaard P, Melbye M, Larsen CVL, Feenstra B, Koch A, Jørgensen ME, Grarup N, Moltke I, Albrechtsen A, Hansen T. <strong>An LDLR missense variant poses high risk of familial hypercholesterolemia in 30% of Greenlanders and offers potential for early cardiovascular disease intervention.</strong> Human Genetics and Genomics Advances 2022; 3:100118. <a href="https://pubmed.ncbi.nlm.nih.gov/36267056/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1016/j.xhgg.2022.100118"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Skotte L, Fadista J, Bybjerg-Grauholm J, Appadurai V, Hildebrand MS, Hansen TF, Banasik K, Grove J, Albiñana C, Geller F, Bjurström CF, Vilhjálmsson BJ, Coleman M, Damiano JA, Burgess R, Scheffer IE, Pedersen OV, Erikstrup C, Westergaard D, Nielsen KR, Sørensen E, Bruun MT, Liu X, Hjalgrim H, Pers TH, Mortensen PB, Mors O, Nordentoft M, Dreier JW, Børglum AD, Christensen J, David M Hougaard DM, Buil A, Hviid A, Melbye M, Ullum H, Berkovic SF, Werge T, Feenstra B. <strong>Genome-wide association study of febrile seizures implicates fever response and neuronal excitability genes.</strong> Brain 2022; 145:555–568. <a href="https://pubmed.ncbi.nlm.nih.gov/35022648/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1093/brain/awab260"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-1">2021</h3>
+<p>Fadista J, Yakimov V, Võsa U, Hansen CS, Kasela S, Skotte L, Geller F, Courraud J,Esko T, Kukuškina V, Buil A, Melbye M, Werge TM, Hougaard DM, Milani L,Bybjerg‑Grauholm J, Cohen AS, Feenstra B. <strong>Genetic regulation of spermine oxidase activity and cancer risk: a Mendelian randomization study.</strong> Scientific Reports; 11: 17463.
+<a href="https://pubmed.ncbi.nlm.nih.gov/34465810/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41598-021-97069-x"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Bliddal S, Banasik K, Pedersen OB, Nissen J, Cantwell L, Schwinn M, Tulstrup M,Westergaard D, Ullum H, Brunak S, Tommerup N, Feenstra B, Geller F, Ostrowski SR, Grønbæk K, Nielsen CH, Nielsen SD, Feldt-Rasmussen U. <strong>Acute and persistent symptoms in non-hospitalized PCR-confirmed COVID-19 patients.</strong> Scientific Reports; 11: 13153.<a href="https://pubmed.ncbi.nlm.nih.gov/34162913/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41598-021-92045-x"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Christensen KJ, Dreier JW, Skotte L, Feenstra B, Grove J, Børglum A, Mitrovic M, Cotsapas C, Christensen J. <strong>Birth characteristics and risk of febrile seizures.</strong> Acta Neurologica Scandinavia; 144(1), 51-57. <a href="https://pubmed.ncbi.nlm.nih.gov/33822360/"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1111/ane.13420"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Fadista J, Kraven LM, Karjalainen J, Andrews SJ, Geller F, The COVID-19 Host Genetics Initiative, Baillie JK, Wain LV, Jenkins RG, Feenstra B. <strong>Shared genetic etiology between idiopathic pulmonary fibrosis and COVID-19 severity.</strong> EBioMedicine2021; 65: 103277.<br />
+<a href="https://pubmed.ncbi.nlm.nih.gov/33714028/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1016/j.ebiom.2021.103277"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Fadista J, Skotte L, Courraud J, Geller F, Gørtz S, Wohlfahrt J, Melbye M, Cohen AS, Feenstra B. <strong>Integrating genetics with newborn metabolomics in infantile hypertrophic pyloric stenosis.</strong> Metabolomics 2021; 17:7. <a href="https://pubmed.ncbi.nlm.nih.gov/33417075/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1007/s11306-020-01763-2"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Cuellar-Partida G, Tung JY, Eriksson N, Albrecht E, Aliev F, Andreassen OA, Barroso I, Beckmann JS, Boks MP, Boomsma DI, Boyd HA, Breteler MMB, Campbell H, Chasman DI, Cherkas LF, Davies G, de Geus EJC, Deary IJ, Deloukas P, Dick DM, Duffy DL, Eriksson JG, Esko T, Feenstra B, Geller F, Gieger C, Giegling I, Gordon SD, Han J, Hansen TF, Hartmann AM, Hayward C, Heikkilä K, Hicks AA, Hirschhorn JN, Hottenga J-J, Huffman JE, Hwang L-D, Ikram MA, Kaprio J, Kemp JP,Khaw K-T, Klopp N, Konte B, Kutalik Z, Lahti J, Li X, Loos RJF, Luciano M, Magnusson SH, Mangino M, Marques-Vidal P, Martin NG, McArdle WL, McCarthy MI, Medina-Gomez C, Melbye M, Melville SA, Metspalu A, Milani L, Mooser V, Nelis M, Nyholt DR, O’Connell KS, Ophoff RA, Palmer C, Palotie A, Palviainen T, Pare G, Paternoster L, Peltonen L, Penninx BWJH, Polasek O, Pramstaller PP, Prokopenko I, Raikkonen K, Ripatti S, Rivadeneira F, Rudan I, Rujescu D, Smit JH, Smith GD, Smoller JW, Soranzo N, Spector TD, St Pourcain B, Starr JM, Stefánsson H, Steinberg S, Teder-Laving M, Thorleifsson G, Stefansson K, Timpson NJ, Uitterlinden AG, van Duijn CM, van Rooij FJA, Vink JM, Vollenweider P, Vuoksimaa E, Waeber G, Wareham NJ, Warrington N, Waterworth D, Werge T, Wichmann H-E, Widen E, Willemsen G, Wright AF, Wright MJ, Xu M, Zhao JH, Kraft P, Hinds DA, Lindgren CM, Magi R, Neale BM, Evans DM, Medland SE. <strong>Genome-wide association study identifies 48 common genetic variants associated with handedness.</strong> Nature Human Behaviour 2021; 5, 59-70. <a href="https://pubmed.ncbi.nlm.nih.gov/32989287/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/s41562-020-00956-y"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-2">2020</h3>
+<p>Krebs K, Bovijn J, Zheng N, Lepamets M, Censin JC, Jürgenson T, Särg D, Abner E,Laisk T, Luo Y, Skotte L, Geller F, Feenstra B, Wang W, Auton A, 23andMe Research Team, Raychaudhuri S, Esko T, Metspalu A, Laur S, Roden DM, Wei W-Q, Holmes MV, Lindgren CM, Phillips EJ, Mägi R, Milani L, Fadista J. **Genome-wide study identifies association between HLA-B*55:01 and self-reported penicillin allergy.** American Journal of Human Genetics 2020; 107(4), 612-621 <a href="https://pubmed.ncbi.nlm.nih.gov/32888428/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1016/j.ajhg.2020.08.008"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Steinthorsdottir V, McGinnis R, Williams NO, Stefansdottir L, Thorleifsson G, Shooter S, Fadista J, Sigurdsson JK, Auro KM, Berezina G, Borges M-C, BumpsteadS, Bybjerg-Grauholm J, Colgiu I, Dolby VA, Dudbridge F, Engel SM, Franklin CS, Frigge ML, Frisbaek Y, Geirsson RT, Geller F, Gretarsdottir S, Gudbjartsson DF,Harmon Q, Hougaard DM, Hegay T, Helgadottir A, Hjartardottir S, Jääskeläinen T,Johannsdottir H, Jonsdottir I, Juliusdottir T, Kalsheker N, Kasimov A, Kemp JP, Kivinen K, Klungsøyr K, Lee WK, Melbye M, Miedzybrodska Z, Moffett A, Najmutdinova D, Nishanova F, Olafsdottir T, Perola M, Pipkin FB, Poston L, Prescott G, Saevarsdottir S, Salimbayeva D, Scaife PJ, Skotte L, Staines-Urias E, StefanssonOA, Sørensen KM, Thomsen LCV, Tragante V, Trogstad L, Simpson NAB, The FINNPEC Consortium, The GOPEC Consortium, Aripova T, Casas JP, Dominiczak AF, Walker JJ, Thorsteinsdottir U, Iversen A-C, Feenstra B, Lawlor DA, Boyd HA, Magnus P, Laivuori H, Zakhidova N, Svyatova G, Stefansson K, Morgan L. <strong>Genetic predisposition to hypertension is associated with preeclampsia in European and Central Asian women.</strong> Nature Communications 2020; 11:5976. <a href="https://pubmed.ncbi.nlm.nih.gov/33239696/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/s41467-020-19733-6"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Chen J, Bacelis J, Navais PS, Srivastava A, Juodakis J, Rouse A, Hallman M, Teramo K, Melbye M, Feenstra B, Freathy RM, Smith GD, Lawlor DA, Murray JC, Williams SM, Jacobsson B, Muglia LJ, Zhang G. <strong>Dissecting maternal and fetal genetic effects underlying the associations between maternal phenotypes, birth outcomes and adult phenotypes: a Mendelian randomization and haplotype-based genetic score analysis in 10,734 mother-infant pairs.</strong> PLoS Medicine 2020; 17(8):e1003305. <a href="https://pubmed.ncbi.nlm.nih.gov/32841251/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1371/journal.pmed.1003305"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Liang L, Rasmussen M-LH, Piening B, Shen X, Chen S, Röst H, Snyder JK, Tibshirani R, Skotte L, Lee NCY, Contrepois K, Feenstra B, Zackriah H, Snyder M, Melbye M. <strong>Metabolic dynamics and prediction of gestational age and time to delivery in pregnant women.</strong> Cell 2020; 181, 1680-1692. <a href="https://pubmed.ncbi.nlm.nih.gov/32589958/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1016/j.cell.2020.05.002"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Vogelezang S, Bradfield JP, Ahluwalia TS, Curtin JA, Lakka TA, et al. <strong>Novel loci for childhood body mass index and shared heritability with adult cardiometabolic traits.</strong> PLoS Genetics 2020; 16(10):e1008718. <a href="https://pubmed.ncbi.nlm.nih.gov/33045005/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1371/journal.pgen.1008718"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Andersen MK, Jørsboe E, Skotte L, Hanghøj K, Sandholt CH, Moltke I, Grarup N, Kern T, Mahendran Y, Søborg B, Bjerregaard P, Larsen CVL, Dahl-Petersen IK, Tiwari HK, Feenstra B, Koch A, Wiener HW, Hopkins SE, Pedersen O, Melbye M, Boyer BB, Jørgensen ME, Albrechtsen A, Hansen T. <strong>The derived allele of a novel intergenic variant at chromosome 11 associates with lower body mass index and a favorable metabolic phenotype in Greenlanders.</strong> PLoS Genetics 2020; 16(1): e1008544.<a href="https://pubmed.ncbi.nlm.nih.gov/31978080/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1371/journal.pgen.1008544"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-3">2019</h3>
+<p>lark D, Okada Y, Moore K, Mason D, Pirastu N, et al. <strong>Associations of autozygosity with a broad range of human phenotypes.</strong> Nature Communications 2019; 10:4957.
+<a href="https://pubmed.ncbi.nlm.nih.gov/31673082/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41467-019-12283-6"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Liu Xs, Helenius Ds, Skotte Ls, Beaumont RN, Wielscher M, Geller F, Juodakis J, Mahajan A, Bradfield JP, Lin FTJ, Vogelezang S, Bustamante M, Ahluwalia TS, Pitkänen N, Wang CA, Bacelis J, Borges MC, Zhang G, Bedell BA, Rossi RM, Skogstrand K, Peng S, Thompson WK, Appadurai V, Lawlor DA, Kalliala I, Power C, McCarthy MI, Boyd HA, Marazita ML, Hakonarson H, Hayes MG, Scholtens DM, Rivadeneira F, Jaddoe VWV, Vinding RK, Bisgaard H, Knight BA, Pahkala K, Raitakari O, Helgeland Ø, Johansson S, Njølstad PR, Fadista J, Schork AJ, Nudel R, Miller DE, Chen X, Weirauch MT, Mortensen PB, Børglum AD, Nordentoft M, Mors O, Hao K, Ryckman KK, Hougaard DM, Kottyan LC, Pennell CE, Lyytikainen LP, Bønnelykke K, Vrijheid M, Felix JF, Lowe WL, Grant SFA, Hyppönen E, Jacobsson B, Jarvelin M-R, Muglia LJ, Murray JC, Freathy RM, Werge TM, Melbye M, Buil A, Feenstra B. <strong>Variants in the fetal genome near pro-inflammatory cytokine genes on 2q13 associate with gestational duration.</strong> Nature Communications2019; 10:3927. <a href="https://pubmed.ncbi.nlm.nih.gov/31477735/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41467-019-11881-8"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Alves AC, De Silva NMG, Karhunen V, Sovio U, Das S, et al. <strong>GWAS on longitudinal growth traits reveals different genetic factors influencing infant, child and adult BMI.</strong> Science Advances 2019; 5(9), eaaw3095.
+<a href="https://pubmed.ncbi.nlm.nih.gov/31840077/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1126/sciadv.aaw3095"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Feenstra B, Gørtz S, Lund M, Ranthe MF, Geller F, Melbye M. <strong>Co-occurrence of infantile hypertrophic pyloric stenosis and congenital heart defects: a nationwide cohort study.</strong> Pediatric Research 2019; 85, 955-960. <a href="https://pubmed.ncbi.nlm.nih.gov/30862960/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41390-019-0369-9"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Warrington NM, Beaumont RN, Horikoshi M, Day FR, Helgeland Ø, Laurin C, Bacelis J, Peng S, Hao K, Feenstra B, Wood AR, Mahajan A, Tyrrell J, Robertson NR, William Rayner N, Qiao Z, Moen G-HØ, Vaudel M, Marsit CJ, Chen J, Nodzenski M, Schnurr TM, Zafarmand MH, Bradfield JP, Grarup N, Kooijman MN, Li-Gao R, Geller F, Ahluwalia TS, Paternoster L, Rueedi R, Huikari V, Hottenga J-J, Lyytikäinen L-P, Cavadino A, Metrustry S, Cousminer DL, Wu Y, Thiering E, Wang CA, Have CT, Vilor-Tejedor N, Joshi PK, Painter JN, Ntalla I, Myhre R, Pitkänen N, van Leeuwen EM, Joro R, Lagou V, Richmond RC, Espinosa A, Barton SJ, Inskip HM, Holloway JW, Santa-Marina L, Estivill X, Ang W, Marsh JA, Reichetzeder C, Marullo L, Hocher B, Lunetta KL, Murabito JM, Relton CL, Kogevinas M, Chatzi L, Allard C, Bouchard L, Hivert M-F, Zhang G, Muglia LJ, Heikkinen J, Early Growth Genetics (EGG) Consortium, Morgen CS, van Kampen AHC, van Schaik BDC, Mentch FD, Langenberg C, Luan J, Scott RA, Zhao JH, Hemani G, Ring SM, Bennett AJ, Gaulton KJ, Fernandez-Tajes J, van Zuydam NR, Medina-Gomez C, de Haan HG, Rosendaal FR, Kutalik Z, Marques-Vidal P, Das S, Willemsen G, Mbarek H, Müller-Nurasyid M, Standl M, R Appel EV, Fonvig CE, Trier C, van Beijsterveldt CEM, Murcia M, Bustamante M, Bonas-Guarch S, Hougaard DM, Mercader JM, Linneberg A, Schraut KE, Lind PA, Medland SE, Shields BM, Knight BA, Chai J-F, Panoutsopoulou K, Bartels M, Sánchez F, Stokholm J, Torrents D, Vinding RK, Willems SM, Atalay M, Chawes BL, Kovacs P, Prokopenko I, Tuke MA, Yaghootkar H, Ruth KS, Jones SE, Loh P-R, Murray A, Weedon MN, Tönjes A, Stumvoll M, Michaelsen KF, Eloranta A-M, Lakka TA, van Duijn CM, Kiess W, Körner A, Niinikoski H, Pahkala K, Raitakari OT, Jacobsson B, Zeggini E, Dedoussis GV, Teo Y-Y, Saw S-M, Montgomery GW, Campbell H, Wilson JF, Vrijkotte TGM, Vrijheid M, de Geus EJCN, Hayes MG, Kadarmideen HN, Holm J-C, Beilin LJ, Pennell CE, Heinrich J, Adair LS, Borja JB, Mohlke KL, Eriksson JG, Widén EE, Hattersley AT, Spector TD, Kähönen M, Viikari JS, Lehtimäki T, Boomsma DI, Sebert S, Vollenweider P, Sørensen TIA, Bisgaard H, Bønnelykke K, Murray JC, Melbye M, Nohr EA, MookKanamori DO, Rivadeneira F, Hofman A, Felix JF, Jaddoe VWV, Hansen T, Pisinger C, Vaag AA, Pedersen O, Uitterlinden AG, Järvelin M-R, Power C, Hyppönen E, Scholtens DM, Lowe Jr WL, Davey Smith G, Timpson NJ, Morris AP, Wareham NJ, Hakonarson H, Grant SFA, Frayling TM, Lawlor DA, Njølstad PR, Johansson S, Ong KK, McCarthy MI, Perry JRB, Evans DM, Freathy RM. <strong>Maternal and fetal genetic effects on birth weight and their relevance to cardio-metabolic risk factors.</strong> Nature Genetics 2019; 51, 804-814.
+<a href="https://pubmed.ncbi.nlm.nih.gov/31043758" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/s41588-019-0403-1"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Middeldorp CM, et al. <strong>The Early Growth Genetics (EGG) and Early Genetics and Lifecourse Epidemiology (EAGLE) Consortia: design, results and future prospects.</strong> European Journal of Epidemiology 2019; 34, 279-300. <a href="https://pubmed.ncbi.nlm.nih.gov/30887376/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1007/s10654-019-00502-9"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Bager P, Gørtz S, Feenstra B, Andersen NN, Jess T, Frisch M, Melbye M. <strong>Increased risk of inflammatory bowel disease in families with tonsillectomy: A Danish national cohort study.</strong> Epidemiology 2019; 30, 256–262. <a href="https://pubmed.ncbi.nlm.nih.gov/30461527/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1097/EDE.0000000000000946"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Fadista J, Skotte L, Geller F, Bybjerg-Grauholm J, Gørtz S, Romitti PA, Caggana M, Kay DM, Matsson H, Boyd HA, Hougaard DM, Nordenskjöld A, Mills JL, Melbye M, Feenstra B. <strong>Genome-wide meta-analysis identifies BARX1 and EML4-MTA3 as new loci associated with infantile hypertrophic pyloric stenosis.</strong> Human Molecular Genetics 2019; 28, 332–340. <a href="https://pubmed.ncbi.nlm.nih.gov/30281099/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddy347"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<h3 id="section-4">2018</h3>
+<p>Kristensen EB, Yakimov V, Bjørn-Mortensen K, Søborg B, Koch A, Andersson M, Kristensen KB, Michelsen SW, Skotte L, Bjerregaard AA, Blaszkewicz M, Golka K, Hengstler JG, Feenstra B, Melbye M, Geller F. <strong>Study of correlation between the NAT2 phenotype and genotype status among Greenlandic Inuit.</strong> EXCLI journal 2018; 17, 1043-1053 <a href="https://pubmed.ncbi.nlm.nih.gov/30564082/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.17179/excli2018-1671"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Ligthart S, Vaez A, Võsa U, Stathopoulou MG, de Vries PS, et al. <strong>Genome-wide association analyses of &gt;200,000 individuals identify 58 genetic loci for chronic in-flammation and highlights pathways that link inflammation and complex disorders.</strong> American Journal of Human Genetics 2018; 103, 691-706. <a href="https://pubmed.ncbi.nlm.nih.gov/30388399/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1016/j.ajhg.2018.09.009"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Beaumont RN, Warrington NM, Cavadino A, Tyrrell J, Nodzenski M, Horikoshi M, Geller F, Myhre R, Richmond RC, Paternoster L, Bradfield JP, Kreiner-Møller E,Huikari V, Metrustry S, Lunetta KL, Painter JN, Hottenga J-J, Allard C, Barton SJ,Espinosa A, Marsh JA, Potter C, Zhang G, Ang W, Berry DJ, Bouchard L, Das S, Early Growth Genetics (EGG) Consortium, Hakonarson H, Heikkinen J, Helgeland Ø,Hocher B, Hofman A, Inskip HM, Jones SE, Kogevinas M, Lind PA, Marullo L, Medland SE, Murray A, Murray JC, Njølstad PR, Nohr EA, Reichetzeder C, Ring SM,Ruth KS, Santa-Marina L, Scholtens DM, Sebert S, Sengpiel V, Tuke MA, Vaudel M, Weedon MN, Willemsen G, Wood AR, Yaghootkar H, Muglia LJ, Bartels M, Relton CL, Pennell CE, Chatzi L, Estivill X, Holloway JW, Boomsma DI, Montgomery GW, Murabito JM, Spector TD, Power C, Järvelin M-R, Bisgaard H, SFA Grant, Sørensen TIA, Jaddoe VW, Jacobsson B, Melbye M, McCarthy MI, Hattersley AT, Hayes MG, Frayling TM, Hivert M-F, Felix JF, Hyppönen E, Lowe, Jr. WL, Evans DM, Lawlor DA, Feenstra B, Freathy RM. <strong>Genome-wide association study of offspring birth weight in 86,577 women identifies five novel loci and highlights maternal genetic effects that are independent of fetal genetics.</strong> Human Molecular Genetics 2018; 27, 742-756.<a href="https://pubmed.ncbi.nlm.nih.gov/29309628/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddx429"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Fadista J, Lund M, Skotte L, Geller F, Nandakumar P, Chatterjee S, Matsson H, Löf-Granström A, Wester T, Salo P, Virtanen V, Carstensen L, Bybjerg-Grauholm J, Hougaard D, Pakarinen M, Perola M, Nordenskjöld A, Chakravarti A, Melbye M, Feenstra B. <strong>Genome-wide association study of Hirschsprung disease detects a novel low frequency variant at the RET locus.</strong> European Journal of Human Genetics 2018; 26, 561–56 <a href="https://pubmed.ncbi.nlm.nih.gov/29379196/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/s41431-017-0053-7"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Bager P, Corn G, Wohlfahrt J, Boyd HA, Feenstra B, Melbye M. <strong>Familial aggregation of tonsillectomy in early childhood and adolescence.</strong> Clinical Epidemiology 2018; 10, 97–105. <a href="https://pubmed.ncbi.nlm.nih.gov/29391832" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.2147/CLEP.S148575"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Haworth S, Shungin D, van der Tas JT, Vucic S, Medina-Gomez, C, Yakimov V,Feenstra B, et al. <strong>Consortium genome-wide meta-analysis for childhood dental caries traits.</strong> Human Molecular Genetics 2018; 17, 3113-3127.<a href="https://pubmed.ncbi.nlm.nih.gov/29931343/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddy237"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Jonsson L, Magnusson TE, Thordarson A, Jonsson T, Geller F, Feenstra B, Melbye M, Nohr EA, Vucic S, Dhamo B, Rivadeneira F, Ongkosuwito EM, Wolvius EB, Leslie EJ, Marazita ML, Howe BJ, Uribe LM, Alonso I, Santos M, Pinho T, Jonsson R, Audolfsson G, Nawaz MS, Olafsson S, Gustafsson O, Ingason A, Unnsteinsdottir U, Bjornsdottir G, Walters GB, Zervas M, Oddsson A, Gudbjartsson DF, Steinberg S, Stefansson H, Stefansson K. <strong>Rare and common variants conferring risk of Tooth Agenesis.</strong> Journal of Dental Research 2018; 97, 515-522 <a href="https://pubmed.ncbi.nlm.nih.gov/29364747/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1177/0022034517750109"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Demenais F, Margaritte-Jeannin P, Barnes KC, Cookson WOC, Altmüller J, et al. <strong>Multiancestry association study identifies new asthma risk loci that colocalize with immune-cell enhancer marks.</strong> Nature Genetics 2018; 50, 42-53. <a href="https://pubmed.ncbi.nlm.nih.gov/29273806/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/s41588-017-0014-7"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Alonso N, Estrada K, Albagha OME, Herrera L, Reppe S, et al. <strong>Identification of a novel locus on chromosome 2q13 which predisposes to clinical vertebral fractures independently of bone density.</strong> Annals of the Rheumatic Diseases 2018; 77, 378–385. <a href="https://pubmed.ncbi.nlm.nih.gov/29170203/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1136/annrheumdis-2017-212469"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Warrington NM, Richmond R, Feenstra B, Myhre R, Gaillard R, et al. <strong>Maternal and fetal genetic contribution to gestational weight gain.</strong> International Journal of Obesity 2018; 42, 775–784. <a href="https://pubmed.ncbi.nlm.nih.gov/28990592/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ijo.2017.248"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-5">2017</h3>
+<p>Zhang G, Feenstra B, Bacelis J, Liu X, Muglia LM, Juodakis J, Miller DE, Litterman N, Jiang P-P, Russell L, Hinds DA, Hu Y, Weirauch MT, Chen X, Chavan AR, Wagner GP, Pavličev M, Nnamani MC, Maziarz J, Karjalainen MK, Rämet M, Sengpiel V,Geller F, Boyd HA, Palotie A, Momany A, Bedell B, Ryckman KK, Huusko JM, Forney CR, Kottyan LC, Hallman M, Teramo K, Nohr EA, Davey-Smith G, Melbye M, Jacobsson B, Muglia LJ. <strong>Genetic Associations with Gestational Duration and Spontaneous Preterm Birth.</strong> New England Journal of Medicine 2017; 377, 1156-1167. <a href="https://pubmed.ncbi.nlm.nih.gov/28877031/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1056/NEJMoa1612665"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Macé A, Tuke MA, Deelen P, Kristiansson K, Mattsson H, Nõukas M, Sapkota Y, Schick U, Porcu E, Rüeger S, McDaid AF, Porteous D, Winkler TW, Salvi E, Shrine N, Liu X, Ang WQ, Zhang W, Feitosa MF, Venturini C, Van der Most PJ, Rosengren A, Wood AR, Beaumont RN, Jones SE, Ruth KS, Yaghootkar H, Tyrrell J, Havulinna AS, Boers H, Mägi R, Kriebel J, Müller-Nurasyid M, Perola M, Nieminen M, Lokki M-L, Kähönen M, Viikari JS, Geller F, Lahti J, Palotie A, Koponen P, Lundqvist A, Rissanen H, Bottinger EP, Afaq S, Wojczynski MK, Lenzini P, Nolte IM, Sparsø T,Schupf N, Christensen K, Perls TT, Newman AB, Werge T, Snieder H, Spector TD, Chambers JC, Koskinen S, Melbye M, Raitakari OT, Lehtimäki T, Tobin MD, Wain LV, Sinisalo J, Peters A, Meitinger T, Martin NG, Wray NR, Montgomery GW, Medland SE, Swertz MA, Vartiainen E, Borodulin K, Männistö S, Murray A, Bochud M, Jacquemont S, Rivadeneira F, Hansen TF, Oldehinkel AJ, Mangino M, Province MA, Deloukas P, Kooner JS, Freathy RM, Pennell C, Feenstra B, Strachan DP, Lettre G, Hirschhorn J, Cusi D, Heid IM, Hayward C, Männik K, Beckmann JS, Loos RJF, Nyholt DR, Metspalu A, Eriksson JG, Weedon MN, Salomaa V, Franke L, Reymond A, Frayling TM, Kutalik Z. <strong>CNV-association meta-analysis in 191,161 European adults reveals new loci associated with anthropometric traits.</strong> Nature Communications 2017; 8:744. <a href="https://pubmed.ncbi.nlm.nih.gov/28963451/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/s41467-017-00556-x"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Sigurdsson S, Alexandersson KF, Sulem P, Feenstra B, Gudmundsdottir S, Halldorsson GH, Olafsson S, Sigurdsson A, Rafnar T, Thorgeirsson T, Sørensen E,Nordholm-Carstensen A, Burcharth J, Andersen J, Jørgensen HS, Possfelt-Møller E, Ullum H, Thorleifsson G, Masson G, Thorsteinsdottir U, Melbye M, Gudbjartsson DF, Stefansson T, Jonsdottir I, Stefansson K. <strong>Sequence variants in ARHGAP15, COLQ and FAM155A associate with diverticular disease and diverticulitis.</strong> Nature Communications 2017; 8:15789 <a href="https://pubmed.ncbi.nlm.nih.gov/28585551/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ncomms15789"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Skotte L, Koch A, Yakimov V, Zhou S, Søborg B, Andersson M, Michelsen SW, Navne JE, Mistry JM, Dion PA, Petersen ML, Børresen ML, Rouleau GA, Geller F, Melbye M, Feenstra B. <strong>A CPT1A missense mutation associated with fatty acid metabolism and reduced height in Greenlanders.</strong> Circulation Cardiovascular Genetics 2017; 10 (3):e001618. <a href="https://pubmed.ncbi.nlm.nih.gov/28611031/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1161/CIRCGENETICS.116.001618"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Mirza N, Appleton R, Burn S, du Plessis D, Duncan R, Farah JO, Feenstra B, Hviid A, Josan V, Mohanraj R, Shukralla A, Sills GJ, Marson AG, Pirmohamed M. <strong>Genetic Regulation of Gene Expression in the Epileptic Human Hippocampus.</strong> Human Molecular Genetics 2017; 26, 1759-1769.<a href="https://pubmed.ncbi.nlm.nih.gov/28334860/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddx061"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Feenstra B, Bager P, Liu X, Hjalgrim H, Nohr EA, Hougaard DM, Geller F, Melbye M. <strong>Genome-wide association study identifies variants in HORMAD2 associated with tonsillectomy.</strong> Journal of Medical Genetics 2017; 54, 358-364. <a href="https://pubmed.ncbi.nlm.nih.gov/27941131/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1136/jmedgenet-2016-104304"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-6">2016</h3>
+<p>Horikoshi M, Beaumont RN, Day FR, Warrington NM, Kooijman MN, Fernandez Tajes J, Feenstra B, and many others. <strong>Genome-wide associations for birth weight and correlations with adult disease.</strong> Nature 2016; 538, 248–252. <a href="https://pubmed.ncbi.nlm.nih.gov/27680694/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/nature19806"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Steinthorsdottir V, Thorleifsson G, Aradottir K, Feenstra B, Sigurdsson A, Stefansdottir L, Kristinsdottir AM, Zink F, Halldorsson GH, Nielsen NM, Geller F, Melbye M, Gudbjartsson DF, Geirsson RT, Thorsteinsdottir U, Stefansson K. <strong>Common variants upstream of KDR encoding VEGFR2 and in TTC39B associate with endometriosis.</strong> Nature Communications 2016; 7:12350 <a href="https://pubmed.ncbi.nlm.nih.gov/27453397/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ncomms12350"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Tyrrell J, Richmond RC, Palmer TM, Feenstra B, Rangarajan J, et al. <strong>Genetic evidence for causal relationships between maternal obesity-related traits and birth weight.</strong> JAMA 2016; 315 (11): 1129-1140. <a href="https://pubmed.ncbi.nlm.nih.gov/26978208/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1001/jama.2016.1975"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Felix JF, et al.<strong>Genome-wide association analysis identifies three new susceptibility loci for childhood body mass index.</strong> Human Molecular Genetics 2016; 25 (2): 389-403. <a href="https://pubmed.ncbi.nlm.nih.gov/26604143/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi:%2010.1093/hmg/ddv472"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Geller F, Søborg B, Koch A, Michelsen SW, Bjørn-Mortensen K, Carstensen L, Nordholm AC, Johansen MMB, Børresen ML, Feenstra B, Melbye M. <strong>Determination of NAT2 acetylation status in the Greenlandic population.</strong> Archives of Toxicology 2016; 90(4): 883-889. <a href="https://pubmed.ncbi.nlm.nih.gov/25794903/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1007/s00204-015-1501-1"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Ruth KS, Campbell PJ, Chew S, Lim EM, Hadlow N, Stuckey BGA, Brown SJ,
+Feenstra B, Joseph J, Surdulescu GL, Zheng HF, Richards JB, Murray A, Spector TD, Wilson SG, Perry JRB. <strong>Genome-wide association study with 1000 genomes imputation identifies signals for nine sex-hormone-related phenotypes.</strong> European Journal of Human Genetics 2016; 24: 284-290. <a href="https://pubmed.ncbi.nlm.nih.gov/26014426/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ejhg.2015.102"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-7">2015</h3>
+<p>Winkler TW, et al. <strong>The influence of age and sex on genetic associations with adult body size and shape: a large-scale genome-wide interaction study.</strong> PLoS Genetics 2015; 11(10): e1005378. <a href="https://pubmed.ncbi.nlm.nih.gov/26426971/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1371/journal.pgen.1005378"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Paternoster L, et al. <strong>Multi-ethnic genome-wide association study of 21,000 cases and 95,000 controls identifies 10 new risk loci for atopic dermatitis.</strong> Nature Genetics 2015; 47: 1449-1456. <a href="https://pubmed.ncbi.nlm.nih.gov/26482879/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.3424"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Joshi PK et al. <strong>Directional dominance on stature and cognition in diverse human populations.</strong> Nature 2015; 523: 459-462. <a href="https://pubmed.ncbi.nlm.nih.gov/26131930/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/nature14618"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Locke AE, Kahali B, Berndt SI, Justice AE, Pers TH, Day FR, Powell C, Vedantam S, Buchkovich ML, Yang J, Croteau-Chonka DC, Esko T, Fall T, Ferreira T, Gustafsson S, Kutalik Z, Luan J, Mägi R, Randall JC, Winkler TW, Wood AR, Workalemahu T, Faul JD, Smith JA, Zhao JH, Zhao W, Chen J, Fehrmann R, Hedman ÅK, Karjalainen J, Schmidt EM, Absher D, Amin N, Anderson D, Beekman M, Bolton JL, BraggGresham JL, Buyske S, Demirkan A, Deng G, Ehret GB, Feenstra B, and many others. <strong>Genetic studies of body mass index yield new insights for obesity biology.</strong> Nature 2015; 518: 197-206. <a href="https://pubmed.ncbi.nlm.nih.gov/25673413/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/nature14177"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Machiela MJ et al. <strong>Characterization of large structural genetic mosaicism in human autosomes.</strong> American Journal of Human Genetics 2015, 96: 487-497. <a href="https://pubmed.ncbi.nlm.nih.gov/25748358/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1016/j.ajhg.2015.01.011"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Cornelis MC, et al. <strong>Genome-wide meta-analysis identifies six novel loci associated with habitual coffee consumption.</strong> Molecular Psychiatry 2015, 20: 647-656. <a href="https://pubmed.ncbi.nlm.nih.gov/25288136/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/mp.2014.107"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>van der Valk, RJP et al. <strong>A novel common variant in DCST2 is associated with length in early life and height in adulthood.</strong> Human Molecular Genetics 2015; 24: 1155-1168. <a href="https://pubmed.ncbi.nlm.nih.gov/25281659/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddu510"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-8">2014</h3>
+<p>Feenstra B, Pasternak B, Geller F, Carstensen L, Wang T, Huang F, Eitson JL, Hollegaard MV, Svanström H, Vestergaard M, Hougaard DM, Schoggins JW, Jan LY, Melbye M, Hviid A.<strong>Common variants associated with general and MMR vaccinerelated febrile seizures.</strong> Nature Genetics 2014; 46: 1274-1282. <a href="https://pubmed.ncbi.nlm.nih.gov/25344690/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.3129"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Wood AR, Esko T, Yang J, Vedantam S, Pers TH, Gustafsson S, Chu AY, Estrada K, Luan J, Kutálik Z, Amin N, Buchkovich ML, Croteau-Chonka DC, Day FR, Duan Y, Fall T, Fehrmann R, Ferreira T, Jackson AU, Karjalainen J, Lo KS, Locke AE, Mägi R,Mihailov E, Porcu E, Randall JC, Scherag A, Vinkhuyzen AAE, Westra H-J, Winkler TW, Workalemahu T, Zhao JH, Absher D, Albrecht E, Anderson D, Baron J, Beekman M, Demirkan A, Ehret GB, Feenstra B, and many others. <strong>Defining the role of common variation in the genomic and biological architecture of adult human height.</strong> Nature Genetics 2014; 46: 1173-1185. <a href="https://pubmed.ncbi.nlm.nih.gov/25282103/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.3097"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Geller F, Feenstra B, Carstensen L, Pers TH, van Rooij IALM, Baranowska KörbergI, Choudhry S, Karjalainen J, Schnack TH, Hollegaard MV, Feitz WFJ, Roeleveld N, Hougaard DM, Hirschhorn JN, Franke L, Baskin LS, Nordenskjöld A, van der Zanden LFM, Melbye M. <strong>Genome-wide association analyses identify variants in developmental genes associated with hypospadias.</strong> Nature Genetics 2014; 46: 957-963. <a href="https://pubmed.ncbi.nlm.nih.gov/25108383/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a>
+<a href="https://doi.org/10.1038/ng.3063"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Perry JRB, Day F, Elks CE, Sulem P, Thompson DJ, Ferreira T, He C, Chasman DI, Esko T, Thorleifsson G, Albrecht E, Ang WQ, Corre T, Cousminer DL, Feenstra B, and 187 others. <strong>Parent-of-origin specific allelic associations among 106 genomic loci for age at menarche.</strong> Nature 2014; 514: 92-97 <a href="https://pubmed.ncbi.nlm.nih.gov/25231870/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/nature13545"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Lund M, Diaz L, Gørtz S, Feenstra B, Dunoe M, Juncker I, Eiberg H, Vissing J, Wohlfahrt J, Melbye M. <strong>Risk of Cancer in Relatives of Patients With Myotonic Dystrophy: a Population Based Cohort Study.</strong> European Journal of Neurology 2014; 21: 1192-1197. <a href="https://pubmed.ncbi.nlm.nih.gov/24838088/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1111/ene.12466"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Lund M, Pasternak B, Davidsen RB, Feenstra B, Krogh C, Diaz LJ, Wohlfahrt J, Melbye M. <strong>Use of Macrolides in Mother and Child and Risk of Infantile Hypertrophic Pyloric Stenosis: Nationwide Cohort Study.</strong> British Medical Journal 2014; 348:g1908. <a href="https://pubmed.ncbi.nlm.nih.gov/24618148/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1136/bmj.g1908"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-9">2013</h3>
+<p>Feenstra B, Geller F, Carstensen L, Romitti PA, Baranowska Körberg I, Bedell B, Krogh C, Fan R, Svenningsson A, Caggana M, Nordenskjöld A, Mills JL, Murray JC, Melbye M. <strong>Plasma Lipids, Genetic Variants near APOA1, and the Risk of Infantile Hypertrophic Pyloric Stenosis.</strong> JAMA 2013; 710 (7): 714-721. <a href="https://pubmed.ncbi.nlm.nih.gov/23989729/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1001/jama.2013.242978"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Zheng X, Feingold E, Ryckman KK, Shaffer JR, Boyd HA, Feenstra B, Melbye M, Marazita ML, Murray JC, Cuenco KT. <strong>Association of maternal CNVs in GSTT1/GSTT2 with smoking, preterm delivery, and low birth weight.</strong> Frontiers in Genetics 2013; volume 4: article 196. <a href="https://pubmed.ncbi.nlm.nih.gov/24194744/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.3389/fgene.2013.00196"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Kim J, Stirling KJ, Cooper ME, Ascoli M, Momany AM, McDonald EL, Ryckman KK,Rhea L, Schaa KL, Cosentino V, Gadow E, Saleme C, Shi M, Hallman M, Plunkett J,Teramo KA, Muglia LJ, Feenstra B, Geller F, Boyd HA, Melbye M, Marazita ML,Dagle JM, Murray JC. <strong>Sequence variants in oxytocin pathway genes and pretermbirth: a candidate gene association study.</strong> BMC Medical Genetics 2013; 14(1), 77. <a href="https://pubmed.ncbi.nlm.nih.gov/23889750/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1186/1471-2350-14-77"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Fatemifar G, Hoggart C, Paternoster L, Kemp JP, Prokopenko I, Horikoshi M, Wright VJ, Tobias JH, Richmond S, Zhurov AI, Toma AM, Pouta A, Taanila A, Sipila K, Lähdesmäki R, Pillas D, Geller F, Feenstra B, Melbye M, Nohr EA, Ring SM, St Pourcain B, Timpson NJ, Smith GD, Jarvelin M-R, Evans DM. <strong>Genome-Wide Association Study of Primary Tooth Eruption Identifies Pleiotropic Loci Associated With Height and Craniofacial Distances.</strong> Human Molecular Genetics 2013; 22(18): 3807-3817 <a href="https://pubmed.ncbi.nlm.nih.gov/23704328/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddt231"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Myking S, Boyd H, Myhre R, Feenstra B, Jugessur A, Devold Pay AS, Østensen IHG, Morken N-H, Busch T, Ryckman KK, Geller F, Magnus P, Gjessing HK, Melbye M, Jacobsson B, Murray JC. <strong>X-chromosomal maternal and fetal SNPs and the risk of spontaneous preterm delivery in a Danish/Norwegian genome-wide association study.</strong> PLoS One 2013; 8 (4), e61781. <a href="https://pubmed.ncbi.nlm.nih.gov/23613933/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1371/journal.pone.0061781"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Fernández-Rhodes L, Demerath EW, Cousminer DL, Tao R, Dreyfus JG, Esko T, Smith AV, Harris TB, McArdle PF, Yerges-Armstrong LM, Elks CE, Strachan DP, Kutalik Z, Vollenweider P, Feenstra B, and 52 others. <strong>Association of adiposity genetic variants with menarche timing in 92,105 women of European descent.</strong> Am. J. Epidemiol. 2013; 178 (3): 451-460. <a href="https://pubmed.ncbi.nlm.nih.gov/23558354/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/aje/kws473"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Horikoshi M, Yaghootkar H, Mook-Kanamori DO, Sovio U, Taal HR, Hennig BJ, Bradfield JP, St. Pourcain B, Evans DM, Charoen P, Kaakinen M, Cousminer DL, Lehtimäki T, Kreiner-Møller E, Warrington NM, Bustamante M, Feenstra B, and 133 others. <strong>Novel loci associated with birth weight reveal genetic links between intrauterine growth and adult height and metabolism.</strong> Nature Genetics 2013; 45: 76-82. <a href="https://pubmed.ncbi.nlm.nih.gov/23202124/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.2477"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-10">2012</h3>
+<p>Tyrrell J, Huikari V, Christie JT, Cavadino A, Bakker R, Brion M-J A, Geller F, Paternoster L, Myhre R, Potter C, Johnson PCD, Ebrahim S, Feenstra B, and 31 others.<strong>Genetic variation in the 15q25 nicotinic acetylcholine receptor gene cluster(CHRNA5–CHRNA3–CHRNB4) interacts with maternal self-reported smoking status during pregnancy to influence birth weight.</strong> Human Molecular Genetics 2012; 21: 5344-58. <a href="https://pubmed.ncbi.nlm.nih.gov/22956269/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1093/hmg/dds372"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Alleman B, Myking S, Ryckman KK, Myhre R, Feingold E, Feenstra B, Geller F, Boyd HA, Shaffer JR, Zhang Q, Begum F, Crosslin D, Doheny KF, Pugh EW, Pay A, Østensen I, Morken N-H, Magnus P, Marazita ML, Jacobsson B, Melbye M, Murray JC. <strong>No Observed Association for Mitochondrial SNPs with Preterm Delivery and related outcomes.</strong> Pediatric Research 2012; 72: 539-544. PMCID: PMC3694399.<a href="https://pubmed.ncbi.nlm.nih.gov/22902432/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/pr.2012.112"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Laurie CC, Laurie CA, Rice K, Doheny KF, Zelnick LR, McHugh CP, Ling H, Hetrick KN, Pugh EW, Amos C, Wei Q, Wang L, Lee JE, Barnes KC, Hansel NN, Mathias R, Daley D, Beaty TH, Scott AF, Ruczinski I, Scharpf RB, Bierut LJ, Hartz SM, Landi MT, Freedman ND, Goldin LR, Ginsburg D, Li J, Desch KC, Strom SS, Blot WJ, Signorello LB, Ingles SA, Chanock SJ, Berndt SI, Le Marchand L, Henderson BE, Monroe KR, Heit JA, de Andrade M, Armasu SM, Regnier C, Lowe WL, Hayes MG, Marazita ML, Feingold E, Murray JC, Melbye M, Feenstra B, and 24 others. <strong>Detectable clonal mosaicism from birth to old age and its relationship to cancer. </strong>Nature Genetics 2012; 44: 642-650. <a href="https://pubmed.ncbi.nlm.nih.gov/22561516/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.2271"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Ekstrøm CT, Feenstra B. <strong>Detecting Sample Misidentifications in Genetic Association Studies.</strong> Statistical Applications in Genetics and Molecular Biology 2012; 11 (3): article 13. <a href="https://pubmed.ncbi.nlm.nih.gov/22611595/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1515/1544-6115.1772"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Taal HR, St Pourcain B, Thiering E, Das S, Mook- Kanamori DO, Warrington NM, Kaakinen M, Kreiner-Møller E, Bradfield JP, Freathy RM, Geller F, Guxens M, Cousminer DL, Kerkhof M, Timpson NJ, Ikram MA, Beilin LJ, Bønnelykke K, Buxton JL, Charoen P, Chawes BLK, Eriksson J, Evans DM, Hofman A, Kemp JP, Kim CE, Klopp N, Lahti J, Lye SJ, McMahon G, Mentch FD, Müller M, O’Reilly PF, Prokopenko I, Rivadeneira F, Steegers EAP, Sunyer J, Tiesler C, Yaghootkar H, the Cohorts for Heart and Aging Research in Genetic Epidemiology (CHARGE) Consortium, Breteler MMB, Debette S, Fornage M, Gudnason V, Launer LJ, van der Lugt A, Mosley TH, Seshadri S, Smith AV, Vernooij MW, the Early Genetics &amp; Lifecourse Epidemiology (EAGLE) consortium, Blakemore AIF, Chiavacci RM, Feenstra B, and 34 others. <strong>Common genetic variants in SBNO1, and near HMGA2 and CRHR1/MAPT affect infant head circumference.</strong> Nature Genetics 2012; 44: 532-538.</p>
+<p>Zheng X, Shaffer JR, McHugh CP, Laurie CC, Feenstra B, Melbye M, Murray JC, Marazita ML, Feingold E. <strong>Using Family Data as a Verification Standard to Evaluate Copy Number Variation Calling Strategies for Genetic Association Studies.</strong> Genetic Epidemiology; 36: 253-262 <a href="https://pubmed.ncbi.nlm.nih.gov/22714937/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1002/gepi.21618"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Feenstra B, Geller F, Krogh C, Hollegaard MV, Gørtz S, Boyd HA, Murray JC, Hougaard DM, Melbye M. <strong>Common Variants near MBNL1 and NKX2-5 are Associated with Infantile Hypertrophic Pyloric Stenosis.</strong> Nature Genetics 2012; 44: 334-337. <a href="https://pubmed.ncbi.nlm.nih.gov/22306654/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.1067"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Fode P, Larsen AR, Feenstra B, Jespersgaard C, Fowler VG Jr, Skov RL, The Danish SAB Study Group Consortium, Stegger M, Andersen PS. <strong>Genetic variability in beta-defensins is not associated with susceptibility to staphylococcus aureus bacteremia.</strong> PLoS One 2012; 7: e32315.
+<a href="https://pubmed.ncbi.nlm.nih.gov/22384213/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1371/journal.pone.0032315"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Paternoster L, Standl M, Chen C-M, Ramasamy A, Bønnelykke K, Duijts L, Ferreira MA, Alves AC, Thyssen JP, Albrecht E, Baurecht H, Feenstra B, and 98 others. <strong>Meta-analysis of genome-wide association studies on atopic dermatitis identifies three novel risk loci.</strong> Nature Genetics 2012; 44: 187-192. <a href="https://pubmed.ncbi.nlm.nih.gov/22197932/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1038/ng.1017"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Urayama KY, Jarrett RF, Hjalgrim H, Diepstra A, Kamatani Y, Chabrier A, Gaborieau V, Boland A , Nieters A, Becker N, Foretova L, Benavente Y, Maynadié M , Staines A, Shield L, Lake A, Montgomery D, Taylor M, Smedby KE, Amini R-M, Adami H-O, Glimelius B, Feenstra B, and 40 others. <strong>Genome-wide Association Study of Classical Hodgkin Lymphoma and Epstein-Barr Virus Status-defined Subgroups.</strong> J National Cancer Institute 2012; 104: 240-253. <a href="https://pubmed.ncbi.nlm.nih.gov/22286212/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/jnci/djr516"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Ryckman KK, Feenstra B, Shaffer JR, Bream ENA, Geller F, Feingold E, Weeks DE, Gadow E, Cosentino V, Saleme C, Simhan HN, Merrill D, Fong C-T, Busch T, Berends SK, Comas B, Camelo JL, Boyd HA, Laurie C, Crosslin D, Zhang Q, Doheny KF, Pugh E, Melbye M, Marazita ML, Dagle JM, Murray JC. <strong>Replication of a GenomeWide Association Study of Birth Weight in Preterm Neonates</strong>. J Pediatrics 2012; 160: 19-24. <a href="https://pubmed.ncbi.nlm.nih.gov/21885063/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1016/j.jpeds.2011.07.038"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-11">2011</h3>
+<p>Geller Fs, Feenstra Bs, Zhang H, Shaffer JR, Hansen T, Esserlind A-L, Boyd HA, Nohr EA, Timpson NJ, Fatemifar G, Paternoster L, Evans DM, Weyant RJ, Levy SM, Lathrop M, Smith GD, Murray JC, Olesen J, Werge T, Marazita ML, Sørensen TIA, Melbye M. <strong>Genome-Wide Association Study Identifies Four Loci Associated with Eruption of Permanent Teeth.</strong> PLoS Genetics 2011; 7: e1002275. <a href="https://pubmed.ncbi.nlm.nih.gov/21931568/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1371/journal.pgen.1002275"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Shaffer JR, Wang X, Feingold E, Lee M, Begum F, Weeks DE, Cuenco KT, Barmada MM, Wendell SK, Crosslin DR, Laurie CC, Doheny KF, Pugh EW, Zhang Q, Feenstra B, Geller F, Boyd HA, Zhang H, Melbye M, Murray JC, Weyant RJ, Crout R, McNeil DW, Levy SM, Slayton RL, Willing MC, Broffitt B, Vieira AR, Marazita ML. <strong>Genome-wide association scan for childhood caries implicates novel genes.</strong> J Dental Research 2011; 90: 1457-1462.<a href="https://pubmed.ncbi.nlm.nih.gov/21940522/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1177/0022034511422910"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<p>Yang J, Manolio TA, Pasquale LR, Boerwinkle E, Caporaso N, Cunningham JM, de Andrade M, Feenstra B, and 16 others. <strong>Genome-partitioning of genetic variation for complex traits using common SNPs.</strong> Nature Genetics 2011; 43: 519-525 <a href="https://pubmed.ncbi.nlm.nih.gov/21552263/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.823"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Sulem P, Gudbjartsson DF, Geller F, Prokopenko I, Feenstra B, and 25 others. <strong>Sequence variants at CYP1A1-CYP1A2 and AHR associate with coffee consumption.</strong> Human Molecular Genetics 2011; 20: 2071-2077. <a href="https://pubmed.ncbi.nlm.nih.gov/21357676/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/hmg/ddr086"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a>.</p>
+<h3 id="section-12">2010</h3>
+<p>Elks CE, Perry FRB, Sulem P, Chasman DI, Franceschini N, He C, Lunetta KL, Visser JA, Byrne EM, Cousminer DL, Gudbjartsson DF, Esko T, Feenstra B, and 161 others. <strong>Thirty new loci for age at menarche identified by a meta-analysis of genomewide association studies.</strong> Nature Genetics 2010; 42:1077-1085. <a href="https://pubmed.ncbi.nlm.nih.gov/21102462/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.714"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Greenberg DA, Monti MC, Feenstra B, Zhang J, Hodge SE. <strong>The essence of linkagebased imprinting detection: Comparing power, type 1 error, and the effects of confounders in two different analysis approaches.</strong> Ann Hum Genet. 2010; 74: 248-262. <a href="https://pubmed.ncbi.nlm.nih.gov/20374235/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1111/j.1469-1809.2010.00568.x"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Cornelis MC, Agrawal A, Cole JW, Hansel NN, Barnes KC, Beaty TH, Bennett SN, Bierut LJ, Boerwinkle E, Doheny KF, Feenstra B, Feingold E, Fornage M, Haiman CA, Harris EL , Hayes MG, Heit JA, Hu FB, Kang JH, Laurie CC, Ling H, Manolio TA, Marazita ML, Mathias RA, Mirel DB, Paschall J, Pasquale LR, Pugh EW, Rice JP, Udren J, van Dam RM, Wang X, Wiggs JL, Williams K, Yu K for the GENEVA Consortium. <strong>The Gene, Environment Association Studies Consortium (GENEVA): Maximizing the knowledge obtained from GWAS by collaboration across studies of multiple conditions.</strong> Genetic Epidemiology 2010; 34: 364-372. <a href="https://pubmed.ncbi.nlm.nih.gov/20091798/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a> <a href="https://doi.org/10.1002/gepi.20492"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-13">2009</h3>
+<p>Boyd HA, Poulsen G, Wohlfahrt J, Murray JC, Feenstra B, Melbye M. <strong>Maternal contributions to preterm delivery.</strong> Am J Epidemiol. 2009; 170: 1358-64. <a href="https://pubmed.ncbi.nlm.nih.gov/19854807/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1093/aje/kwp324"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Sulem P, Gudbjartsson DF, Rafnar T, Holm H, Olafsdottir EJ, Olafsdottir GH, Jonsson T, Alexandersen P, Feenstra B, Boyd HA, Aben KK, Verbeek AL, Roeleveld N, Jonasdottir A, Styrkarsdottir U, Steinthorsdottir V, Karason A, Stacey SN, Gudmundsson J, Jakobsdottir M, Thorleifsson G, Hardarson G, Gulcher J, Kong A, Kiemeney LA, Melbye M, Christiansen C, Tryggvadottir L, Thorsteinsdottir U, Stefansson K. <strong>Genome-wide association study identifies sequence variants on 6q21 associated with age at menarche.</strong> Nature Genetics 2009; 41: 734-738. <a href="https://pubmed.ncbi.nlm.nih.gov/19448622/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1038/ng.383"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-14">2008</h3>
+<p>Feenstra B, Boyd HA, Melbye M. <strong>[Genome-wide association studies].</strong> Ugeskr Laeger 2008; 170: 3216-20 (Danish).</p>
+<h3 id="section-15">2006</h3>
+<p>Feenstra B, Skovgaard IM, Broman KW. <strong>Mapping quantitative trait loci by an extension of the Haley-Knott regression method using estimating equations.</strong> Genetics 2006; 173: 2269-2278. <a href="https://pubmed.ncbi.nlm.nih.gov/16702423/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1534/genetics.106.058537"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Christiansen MJ, Feenstra B, Skovgaard IM, Andersen SB. <strong>Genetic analysis of resistance to yellow rust in hexaploid wheat using multiple crosses.</strong> Theor. Appl. Genet. 2006; 112: 581-591. <a href="https://pubmed.ncbi.nlm.nih.gov/16395570/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1007/s00122-005-0128-7"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-16">2004</h3>
+<p>Feenstra B, Skovgaard IM. <strong>A QTL mixture model that avoids spurious LOD score peaks.</strong> Genetics 2004; 167: 959-965 <a href="https://pubmed.ncbi.nlm.nih.gov/15238544/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1534/genetics.103.025437"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<p>Feenstra B, Greenberg DA, Hodge SE. <strong>Using LOD scores to detect sex differences in male-female recombination fractions.</strong> Hum. Hered. 2004; 57: 100-108. <a href="https://pubmed.ncbi.nlm.nih.gov/15192282/" width="0.5%"><img src="images/pubmed-icon.png" title="PubMed" alt="PubMed" /></a><a href="https://doi.org/10.1159/000077547"><img src="images/doi_logo_small2.png" title="doi" alt="doi" /></a></p>
+<h3 id="section-17">1999</h3>
+<p>Armstrong DP, Castro I, Alley JC, Feenstra B, Perrott JK. <strong>Mortality and behaviour of Hihi, an endangered New Zealand honeyeater, in the establishment phase following translocation.</strong> Biol. Cons. 1999; 89: 329-339.</p>
+<h2 id="letters">Letters</h2>
+<p>Pasternak B, Feenstra B, Melbye M, Hviid A. <strong>Improving vaccine safety through a better understanding of vaccine adverse events.</strong> Clin. Infect. Dis. 2015; 60(10):1586-1587.</p>
+<p>Geller F, Feenstra B, Melbye M. <strong>No association between sex ratio of offspring and the mother’s age at menarche (letter to the editor).</strong> Hum Reprod. 2011; 26: 3202-3203</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p>© Copyright 2018 <a
+href="https://github.com/distillpub/template/blob/master/AUTHORS">The
+Distill Template Authors</a> and <a
+href="https://www.rstudio.com">RStudio, Inc</a>.</p>
+<p>Software licensed under the <a
+href="https://www.apache.org/licenses/LICENSE-2.0">Apache License,
+v2.0</a>.</p>
+</div>
+<!--/radix_placeholder_navigation_after_body-->
+
+
+</body>
+
+</html>

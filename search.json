@@ -1,0 +1,12 @@
+{
+  "articles": [
+    {
+      "path": "team.html",
+      "title": "Team members",
+      "author": [],
+      "contents": "\r\nMembers of the lab:\r\nBjarke Feenstra\r\n\r\n\r\nSenior researcher, group leaderTwitterLinkedInContact Bjarke\r\nFrank Geller\r\nSenior researcher\r\n\r\n\r\n\r\nXiaoping Wu\r\nPostdoc\r\n\r\n\r\n\r\nGitHub\r\nNiklas Andersson\r\nPhD student\r\n\r\n\r\n\r\nVictor Yakimov\r\nPhD student\r\n\r\n\r\n\r\nSalvör Ísberg\r\nStudent research assistantTwitterLinkedIn\r\n\r\n\r\n\r\nJoão Fadista\r\nAffiliated researcher\r\n\r\n\r\n\r\nLine Skotte\r\nAffiliated researcher\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-11-27T17:17:22+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
